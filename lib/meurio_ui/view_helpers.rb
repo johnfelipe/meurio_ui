@@ -26,7 +26,7 @@ module MeurioUi
 
     def sign_in_path
       if [:pdp, :multitude, :minhascidades, :compartilhaco, :legislando].include? @app
-        "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?service=#{request.url}"
+        "http://192.168.1.5:3001/?service=#{request.url}"
       else
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}"
       end
