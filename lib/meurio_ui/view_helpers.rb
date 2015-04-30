@@ -34,7 +34,7 @@ module MeurioUi
 
     def sign_out_path
       if [:pdp, :multitude, :minhascidades, :compartilhaco, :legislando].include? @app
-        "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?service=#{request.url}"
+        "http://192.168.1.5:3001/logout?service=#{request.url}"
       else
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?redirect_url=#{request.url}"
       end
@@ -42,7 +42,7 @@ module MeurioUi
 
     def edit_profile_path
       if [:pdp, :multitude, :minhascidades, :compartilhaco, :legislando].include? @app
-        "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
+        "http://192.168.1.5:3001/users/#{current_user.id}/edit"
       else
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
       end
